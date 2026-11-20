@@ -1,0 +1,17 @@
+name = "letters"
+main = "src/worker.js"
+compatibility_date = "2026-09-01"
+routes = [{ pattern = "letters.example.com", custom_domain = true }]
+
+[vars]
+SENDER_NAME = "Letters"
+SENDER_EMAIL = "hello@letters.example.com"
+# Demo mode. Comma-separated patterns, * is a wildcard. Set to "*" to turn demo mode off.
+ALLOWED_EMAILS = "yourname+*@gmail.com"
+# Printed by `node scripts/setup.mjs`
+LIST_ID = "3"
+OPTIN_TEMPLATE_ID = "1"
+WELCOME_TEMPLATE_ID = "2"
+
+# Secrets (not here!): BREVO_API_KEY and ADMIN_PASSWORD.
+# Local: .dev.vars. Production: npx wrangler secret put BREVO_API_KEY / ADMIN_PASSWORD
